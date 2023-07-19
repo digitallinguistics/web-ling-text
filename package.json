@@ -1,6 +1,5 @@
 {
   "name": "web-ling-text",
   "version": "0.1.0",
-  "description": "A web app that converts rich text in linguistics to a more web-friendly format",
   "private": true
 }
