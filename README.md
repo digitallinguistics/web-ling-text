@@ -1,3 +1,3 @@
 # web-ling-text
 
-A web app that converts rich text in linguistics to a more web-friendly format
+A tiny web app that converts rich text prose in linguistics to plain text.
