@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset=utf-8>
+  <meta name=viewport content='width=device-width, initial-scale=1.0'>
+  <title>Web Ling Text</title>
+  <link rel=stylesheet href=styles.css>
+</head>
+<body>
+  <h1>Web Ling Text</h1>
+  <p>A web app that converts rich text in linguistics to a more web-friendly format.</p>
+  <ul>
+    <li><em>Italicized</em> text (using <code>&lt;em&gt;</code>) is converted to “quoted text”.</li>
+    <li><strong>Bold</strong> text (using <code>&lt;strong&gt;</code>) is converted to *text with asterisks*.</li>
+  </ul>
+  <p>Press <code>Ctrl + V</code> to convert text from clipboard. The converted text will be copied to your clipboard automatically.</p>
+  <output id=output></output>
+  <script src=smartquotes.js></script>
+  <script type=module src=index.js></script>
+</body>
+</html>
