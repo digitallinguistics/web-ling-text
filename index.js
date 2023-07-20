@@ -3,10 +3,11 @@ const output        = document.getElementById(`output`)
 
 function convertText(ev) {
 
-  const pastedText = ev.clipboardData.getData(`text/html`)
-  const template   = document.createElement(`template`)
+  const text     = ev.clipboardData.getData(`text/plain`)
+  const html     = ev.clipboardData.getData(`text/html`)
+  const template = document.createElement(`template`)
 
-  template.innerHTML = pastedText
+  template.innerHTML = html || text
 
   const italicNodes = template.content.querySelectorAll(`em`)
 
@@ -20,16 +21,12 @@ function convertText(ev) {
     node.replaceWith(`*${ node.textContent }*`)
   }
 
-  output.innerHTML = ``
+  output.innerHTML   = ``
   output.appendChild(template.content)
 
   smartquotes()
 
-  const type          = `text/html`
-  const blob          = new Blob([output.innerHTML], { type });
-  const clipboardItem = new ClipboardItem({ [type]: blob })
-
-  clipboard.write([clipboardItem])
+  clipboard.writeText(output.innerText)
 
 }
 
